@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+
+            input,button{
+                padding: 3px;
+                margin-top: 10px;
+                
+                
+            }
+            div{
+                margin:auto;
+                width: 50%;
+                background-color: brown;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div>
+
+        <label>Enter User Name</label><br>
+        <input type="text" id="username"><br>
+
+        <label>Enter Password</label><br>
+        <input type="text" id="password"><br>
+
+        <button onclick="validateLogin()">Login</button><br>
+
+        <h1 id="msg"></h1>
+
+        </div>
+
+        <script>
+            function validateLogin(){
+                var uname=document.getElementById("username").value
+                var pwd=document.getElementById("password").value
+                var msg=document.getElementById("msg")
+
+                if(uname=="javascript" && pwd=="js123"){
+                   msg.innerHTML="Login Successfull"
+                  // alert("Login Successfull")
+                   msg.style.color="white"
+                   msg.style.backgroundColor="blue"
+                }else if(uname=='' || pwd==''){
+                   msg.innerHTML="Enter details"
+                   msg.style.color="white"
+                   msg.style.backgroundColor="green"
+                }else{
+                   msg.innerHTML="Login Failed"
+                   msg.style.color="white"
+                   msg.style.backgroundColor="red"
+                }
+            }
+        </script>
+
+
+        
+
+
+    </body>
+</html>
